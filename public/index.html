@@ -23,21 +23,21 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
-        <a href="#virtual-tour">360° Virtual Tour</a>
+        <a href="#virtual-tour">360°VT</a>
         <a href="dashboard.html">Dashboard</a>
         <a href="contact.html">Contact</a>
         <a href="#" data-open-login>Login</a>
       </div>
       <div class="nav-cta">
-        <button id="theme-toggle" class="btn btn-outline" aria-label="Toggle theme">🌓</button>
-        <a class="btn btn-outline" href="#about">Check Crowd Status</a>
-        <a class="btn btn-primary" href="dashboard.html">Book Darshan</a>
+        <button id="theme-toggle" class="btn btn" aria-label="Toggle theme">🌓</button>
+        <a class="btn btn-primary" href="dashboard.html">Check Crowd Status</a>
+        <!-- <a class="btn btn-primary" href="dashboard.html">Book Darshan</a> -->
       </div>
     </div>
   </nav>
 
   <header class="hero" id="home">
-    <img class="bg" loading="lazy" src="https://images.unsplash.com/photo-1545434989-8739d8f6a2af?q=80&w=1974&auto=format&fit=crop" alt="Temple background" />
+    <img class="bg" loading="lazy" src="Picture_videos_asset/Mata-Kalika-Devi-Temple.jpg" alt="Temple background" />
     <div class="content">
       <h1>Temple & Pilgrimage Crowd Management System</h1>
       <p>Safe & Seamless Pilgrimage Experience</p>
@@ -55,7 +55,7 @@
       <div class="grid cols-4">
         <div class="card virtual-tour-card" onclick="openVirtualTour('somnath')">
           <div class="video-container">
-            <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?q=80&w=2070&auto=format&fit=crop" alt="Somnath Temple" loading="lazy">
+            <img src="Picture_videos_asset/somnathtemp.jpg" alt="Somnath Temple" loading="lazy">
             <div class="play-button">▶</div>
           </div>
           <h3>Somnath Temple</h3>
@@ -63,7 +63,7 @@
         </div>
         <div class="card virtual-tour-card" onclick="openVirtualTour('dwarka')">
           <div class="video-container">
-            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2070&auto=format&fit=crop" alt="Dwarka Temple" loading="lazy">
+            <img src="Picture_videos_asset/Dwarkadhish-Temple-1.jpg" alt="Dwarka Temple" loading="lazy">
             <div class="play-button">▶</div>
           </div>
           <h3>Dwarkadhish Temple</h3>
@@ -71,7 +71,7 @@
         </div>
         <div class="card virtual-tour-card" onclick="openVirtualTour('ambaji')">
           <div class="video-container">
-            <img src="https://images.unsplash.com/photo-1544966503-7cc4c87034e8?q=80&w=2070&auto=format&fit=crop" alt="Ambaji Temple" loading="lazy">
+            <img src="Picture_videos_asset/Ambaji-Temple-Banner.jpg" alt="Ambaji Temple" loading="lazy">
             <div class="play-button">▶</div>
           </div>
           <h3>Ambaji Temple</h3>
@@ -79,7 +79,7 @@
         </div>
         <div class="card virtual-tour-card" onclick="openVirtualTour('pavagadh')">
           <div class="video-container">
-            <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?q=80&w=2070&auto=format&fit=crop" alt="Pavagadh Temple" loading="lazy">
+            <img src="Picture_videos_asset/pabagadh.jpeg" alt="Pavagadh Temple" loading="lazy">
             <div class="play-button">▶</div>
           </div>
           <h3>Pavagadh Kalika Temple</h3>
@@ -165,6 +165,34 @@
 
   <!-- Back to top -->
   <button id="back-to-top" class="back-to-top" aria-label="Back to top">↑</button>
+
+   <!-- Chatbot -->
+  <div id="chatbot" class="chatbot">
+    <button id="chat-toggle" class="chat-toggle">💬</button>
+    <div class="chat-window">
+      <div class="chat-header">Temple Assistant <button id="chat-close">✕</button></div>
+      <div class="chat-body" id="chat-body"></div>
+      <div class="chat-quick">
+        <button data-go="#dashboard">Book Darshan</button>
+        <button data-go="#services">Show Services</button>
+        <button data-go="#contact">Find Somnath Temple</button>
+      </div>
+      <div class="chat-input">
+        <input id="chat-input" placeholder="Ask something..." />
+        <button id="chat-send" class="btn btn-primary">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="js/script.js"></script>
+  <script src="chatbot.js"></script>
+  <script src="map.js"></script>    
+
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   <script src="./assets/js/main.js"></script>
