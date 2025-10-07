@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard · Temple CMS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <link rel="icon" href="assets/img/favicon.ico">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand"><span class="logo-dot"></span> Temple CMS</a>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="index.html#virtual-tour">360° Virtual Tour</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="contact.html">Contact</a>
+        <a href="#" data-open-login>Login</a>
+      </div>
+      <div class="nav-cta">
+        <button id="theme-toggle" class="btn btn-outline" aria-label="Toggle theme">🌓</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Live Crowd & Operations</h2>
+      <div class="grid cols-3" style="margin-bottom:10px">
+        <div class="card"><strong>Total Pilgrims</strong><div id="sumTotal" style="font-size:22px;font-weight:700">-</div></div>
+        <div class="card"><strong>Avg Wait Time</strong><div id="avgWait" style="font-size:22px;font-weight:700">-</div></div>
+        <div class="card"><strong>Safety Status</strong><div id="safety" class="status-pill pill-green">Normal</div></div>
+      </div>
+      <div style="margin: 10px 0">
+        <label for="templeSel" class="muted">Temple</label>
+        <select id="templeSel" style="padding:8px 10px;border-radius:8px;border:1px solid #e5e7eb">
+          <option>Somnath</option>
+          <option>Dwarka</option>
+          <option>Ambaji</option>
+          <option>Pavagadh</option>
+        </select>
+        <span class="muted" id="lastUpdated" style="margin-left:10px"></span>
+      </div>
+      <div class="widgets">
+        <div class="widget">
+          <div class="muted">Live Crowd Count</div>
+          <div id="crowdCount" style="font-size:28px;font-weight:700">-</div>
+        </div>
+        <div class="widget">
+          <div class="muted">Virtual Queue</div>
+          <div id="queueLength" style="font-size:28px;font-weight:700">-</div>
+        </div>
+        <div class="widget">
+          <div class="muted">Traffic</div>
+          <div id="trafficPill" class="status-pill pill-green">Green</div>
+        </div>
+        <div class="widget">
+          <div class="muted">Parking Availability</div>
+          <div id="parking" style="font-size:28px;font-weight:700">-</div>
+        </div>
+      </div>
+
+      <div class="grid cols-2" style="margin-top:20px">
+        <div class="card">
+          <h3>Crowd Count (last hour)</h3>
+          <canvas id="lineChart" height="140"></canvas>
+        </div>
+        <div class="card">
+          <h3>Gate-wise Distribution</h3>
+          <canvas id="barChart" height="140"></canvas>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:20px">
+        <h3>Emergency Alerts</h3>
+        <p id="emergency" class="muted">No active alerts.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h4>Temple CMS</h4>
+        <p>Royal blue & gold theme for calm, professional UI.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <p><a href="services.html">Services</a> · <a href="contact.html">Contact</a></p>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <p><a href="#">Twitter</a> · <a href="#">LinkedIn</a> · <a href="#">YouTube</a></p>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:10px">© <span id="year"></span> Temple CMS · Made by Abhinikesh & Team | 2025</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/auth.js"></script>
+  <script src="./assets/js/dashboard.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple & Pilgrimage Crowd Management System</title>
+  <meta name="description" content="Smart crowd management for Somnath, Dwarka, Ambaji, Pavagadh with AI, IoT, and real-time analytics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/icons/favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="vt.html">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="brand"><span class="logo-dot"></span> Temple CMS</a>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#mission">Mission</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#VT">VirtualTour</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <button id="theme-toggle" class="btn btn-outline" aria-label="Toggle theme">🌓</button>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Home / Hero -->
+  <section id="home" class="hero" data-parallax>
+    <div class="overlay"></div>
+    <div class="container center">
+      <h1 data-aos="fade-up" data-aos-delay="100">Temple & Pilgrimage Crowd Management System</h1>
+      <p data-aos="fade-up" data-aos-delay="200">Safe & Seamless Pilgrimage Experience</p>
+      <div class="actions" data-aos="fade-up" data-aos-delay="300">
+        <a class="btn btn-primary" href="#dashboard">Book Darshan</a>
+        <a class="btn btn-outline" href="#services">Explore Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section bg-glass">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">About the Project</h2>
+      <p class="muted" data-aos="fade-up" data-aos-delay="100">Managing large pilgrim crowds at Somnath, Dwarka, Ambaji, and Pavagadh using real-time analytics, AI, and IoT.</p>
+      <div class="grid cols-4" style="margin-top:20px">
+        <div class="card" data-aos="fade-up" data-aos-delay="150"><div class="icon">OC</div><h3>Overcrowding</h3><p class="muted">Predictive analytics and slot-based entry.</p></div>
+        <div class="card" data-aos="fade-up" data-aos-delay="250"><div class="icon">SR</div><h3>Safety Risks</h3><p class="muted">Emergency alerts and safety norms.</p></div>
+        <div class="card" data-aos="fade-up" data-aos-delay="350"><div class="icon">TC</div><h3>Traffic</h3><p class="muted">Live traffic & guided parking.</p></div>
+        <div class="card" data-aos="fade-up" data-aos-delay="450"><div class="icon">AC</div><h3>Accessibility</h3><p class="muted">Support for differently-abled pilgrims.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section id="mission" class="section mission" data-parallax>
+    <div class="container center">
+      <h2 class="section-title" data-aos="fade-up">Our Mission</h2>
+      <p class="mission-text" data-aos="fade-up" data-aos-delay="150">To combine faith and technology to create safer, faster, and smarter pilgrimage experiences for everyone.</p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Our Smart Services</h2>
+      <div class="grid cols-3" style="margin-top:20px">
+        <div class="card service" data-service="AI Crowd Prediction" data-aos="fade-up" data-aos-delay="100"><div class="icon">AI</div><h3>AI Crowd Prediction</h3><p class="muted">Forecast peaks via ML models.</p><button class="btn btn-outline learn">Learn More</button></div>
+        <div class="card service" data-service="Smart Queue & Ticketing" data-aos="fade-up" data-aos-delay="150"><div class="icon">SQ</div><h3>Smart Queue & Ticketing</h3><p class="muted">Virtual queues and slots.</p><button class="btn btn-outline learn">Learn More</button></div>
+        <div class="card service" data-service="IoT Surveillance" data-aos="fade-up" data-aos-delay="200"><div class="icon">IoT</div><h3>IoT Surveillance</h3><p class="muted">Density & flow tracking.</p><button class="btn btn-outline learn">Learn More</button></div>
+        <div class="card service" data-service="Safety & Emergency Alerts" data-aos="fade-up" data-aos-delay="250"><div class="icon">SA</div><h3>Safety & Alerts</h3><p class="muted">Heat/crowd advisories.</p><button class="btn btn-outline learn">Learn More</button></div>
+        <div class="card service" data-service="Traffic Management" data-aos="fade-up" data-aos-delay="300"><div class="icon">TM</div><h3>Traffic Management</h3><p class="muted">Parking & shuttle info.</p><button class="btn btn-outline learn">Learn More</button></div>
+        <div class="card service" data-service="Accessibility Features" data-aos="fade-up" data-aos-delay="350"><div class="icon">AC</div><h3>Accessibility</h3><p class="muted">Barrier-free routes.</p><button class="btn btn-outline learn">Learn More</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dashboard -->
+  <section id="dashboard" class="section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Live Dashboard</h2>
+      <div class="grid cols-3" style="margin:10px 0" data-aos="fade-up" data-aos-delay="100">
+        <div class="card"><strong>Total Pilgrims</strong><div id="sumTotal">-</div></div>
+        <div class="card"><strong>Avg Wait Time</strong><div id="avgWait">-</div></div>
+        <div class="card"><strong>Safety</strong><div id="safety" class="status-pill pill-green">Normal</div></div>
+      </div>
+      <div class="grid cols-2" data-aos="fade-up" data-aos-delay="150">
+        <div class="card"><canvas id="crowdChart" height="140"></canvas></div>
+        <div class="card"><canvas id="trafficChart" height="140"></canvas></div>
+      </div>
+      <p class="muted" id="lastUpdated" style="margin-top:8px"></p>
+      <div class="card" style="margin-top:10px" data-aos="fade-up" data-aos-delay="200">
+        <h3>Emergency Alerts</h3>
+        <p id="emergency">No active alerts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Map -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Contact & Temple Map</h2>
+      <div class="grid cols-2">
+        <div class="card" data-aos="fade-up" data-aos-delay="100">
+          <form id="contact-form">
+            <div class="row">
+              <label>Name<input name="name" required></label>
+              <label>Email<input name="email" type="email" required></label>
+              <label>Message<textarea name="message" rows="5" required></textarea></label>
+              <button class="btn btn-primary" type="submit">Send</button>
+            </div>
+          </form>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="150">
+          <div id="map" style="height:360px"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Temple CMS · Made by Abhinikesh & Team | 2025</p>
+    </div>
+  </footer>
+
+  <!-- Service Modal -->
+  <div class="modal" id="service-modal" aria-hidden="true">
+    <div class="panel">
+      <header>
+        <h3 id="service-title">Service</h3>
+        <button class="close" aria-label="Close">✕</button>
+      </header>
+      <p id="service-desc" class="muted"></p>
+    </div>
+  </div>
+
+  <!-- Chatbot -->
+  <div id="chatbot" class="chatbot">
+    <button id="chat-toggle" class="chat-toggle">💬</button>
+    <div class="chat-window">
+      <div class="chat-header">Temple Assistant <button id="chat-close">✕</button></div>
+      <div class="chat-body" id="chat-body"></div>
+      <div class="chat-quick">
+        <button data-go="#dashboard">Book Darshan</button>
+        <button data-go="#services">Show Services</button>
+        <button data-go="#contact">Find Somnath Temple</button>
+      </div>
+      <div class="chat-input">
+        <input id="chat-input" placeholder="Ask something..." />
+        <button id="chat-send" class="btn btn-primary">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="js/script.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/map.js"></script>
+</body>
+</html>
+

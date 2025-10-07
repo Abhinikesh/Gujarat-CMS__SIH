@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temple & Pilgrimage Crowd Management System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <link rel="icon" href="assets/img/favicon.ico">
+  <meta name="description" content="Safe & Seamless Pilgrimage Experience across Somnath, Dwarka, Ambaji, and Pavagadh.">
+  <meta property="og:title" content="Temple & Pilgrimage Crowd Management System">
+  <meta property="og:description" content="Real-time crowd analytics, smart queues, and safety alerts.">
+  <meta property="og:type" content="website">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand"><span class="logo-dot"></span> Temple CMS</a>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="#virtual-tour">360° Virtual Tour</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="contact.html">Contact</a>
+        <a href="#" data-open-login>Login</a>
+      </div>
+      <div class="nav-cta">
+        <button id="theme-toggle" class="btn btn-outline" aria-label="Toggle theme">🌓</button>
+        <a class="btn btn-outline" href="#about">Check Crowd Status</a>
+        <a class="btn btn-primary" href="dashboard.html">Book Darshan</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <img class="bg" loading="lazy" src="https://images.unsplash.com/photo-1545434989-8739d8f6a2af?q=80&w=1974&auto=format&fit=crop" alt="Temple background" />
+    <div class="content">
+      <h1>Temple & Pilgrimage Crowd Management System</h1>
+      <p>Safe & Seamless Pilgrimage Experience</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="dashboard.html">Book Darshan</a>
+        <a class="btn btn-outline" href="#about">Check Crowd Status</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section" id="virtual-tour">
+    <div class="container">
+      <h2 class="section-title">360° Virtual Tour</h2>
+      <p class="muted">Experience the divine beauty and architectural marvels of Gujarat's sacred temples through immersive 360° virtual tours. Explore these holy sites from the comfort of your home.</p>
+      <div class="grid cols-4">
+        <div class="card virtual-tour-card" onclick="openVirtualTour('somnath')">
+          <div class="video-container">
+            <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?q=80&w=2070&auto=format&fit=crop" alt="Somnath Temple" loading="lazy">
+            <div class="play-button">▶</div>
+          </div>
+          <h3>Somnath Temple</h3>
+          <p>Explore the legendary Jyotirlinga shrine, one of the twelve most sacred Shiva temples in India, with its stunning coastal location and rich history.</p>
+        </div>
+        <div class="card virtual-tour-card" onclick="openVirtualTour('dwarka')">
+          <div class="video-container">
+            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2070&auto=format&fit=crop" alt="Dwarka Temple" loading="lazy">
+            <div class="play-button">▶</div>
+          </div>
+          <h3>Dwarkadhish Temple</h3>
+          <p>Discover the ancient city of Dwarka and the magnificent temple dedicated to Lord Krishna, with its intricate architecture and spiritual significance.</p>
+        </div>
+        <div class="card virtual-tour-card" onclick="openVirtualTour('ambaji')">
+          <div class="video-container">
+            <img src="https://images.unsplash.com/photo-1544966503-7cc4c87034e8?q=80&w=2070&auto=format&fit=crop" alt="Ambaji Temple" loading="lazy">
+            <div class="play-button">▶</div>
+          </div>
+          <h3>Ambaji Temple</h3>
+          <p>Visit the sacred Shakti Peetha dedicated to Goddess Amba, renowned for its spiritual energy and beautiful hilltop location in the Aravalli range.</p>
+        </div>
+        <div class="card virtual-tour-card" onclick="openVirtualTour('pavagadh')">
+          <div class="video-container">
+            <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?q=80&w=2070&auto=format&fit=crop" alt="Pavagadh Temple" loading="lazy">
+            <div class="play-button">▶</div>
+          </div>
+          <h3>Pavagadh Kalika Temple</h3>
+          <p>Experience the historic hill temple of Goddess Kalika, accessible by ropeway, offering panoramic views and deep spiritual significance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title">About the Project</h2>
+      <p class="muted">Managing large pilgrim crowds at Somnath, Dwarka, Ambaji, and Pavagadh with real-time analytics, smart queueing, and safety-first design.</p>
+      <div class="grid cols-4">
+        <div class="card">
+          <div class="icon">OC</div>
+          <h3>Overcrowding</h3>
+          <p class="muted">Predictive analytics and slot-based entry to prevent congestion.</p>
+        </div>
+        <div class="card">
+          <div class="icon">SR</div>
+          <h3>Safety Risks</h3>
+          <p class="muted">Emergency alerts and compliance with crowd safety norms.</p>
+        </div>
+        <div class="card">
+          <div class="icon">TC</div>
+          <h3>Traffic Congestion</h3>
+          <p class="muted">Live traffic indicators and guided parking management.</p>
+        </div>
+        <div class="card">
+          <div class="icon">AC</div>
+          <h3>Accessibility</h3>
+          <p class="muted">Barrier-free routes, assistance kiosks, and multi-language support.</p>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item"><strong>Phase 1:</strong> Requirements & safety audits</div>
+        <div class="timeline-item"><strong>Phase 2:</strong> IoT & queue system pilots</div>
+        <div class="timeline-item"><strong>Phase 3:</strong> Full-scale deployment & training</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h4>Temple CMS</h4>
+        <p>Royal blue & gold theme for calm, professional UI.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <p><a href="about.html">About</a> · <a href="services.html">Services</a> · <a href="dashboard.html">Dashboard</a></p>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <p><a href="#">Twitter</a> · <a href="#">LinkedIn</a> · <a href="#">YouTube</a></p>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:10px">© <span id="year"></span> Temple CMS · Made by Abhinikesh & Team | 2025</p>
+  </footer>
+
+  <!-- Auth Modal -->
+  <div class="modal" id="auth-modal" aria-hidden="true">
+    <div class="panel">
+      <header>
+        <h3 class="title">Welcome Back</h3>
+        <button class="close" aria-label="Close">✕</button>
+      </header>
+      <form id="auth-form">
+        <div class="row">
+          <label>Email<input type="email" name="email" required /></label>
+          <label>Password<input type="password" name="password" required minlength="6" /></label>
+          <label class="confirm-password" style="display:none">Confirm Password<input type="password" name="confirm" minlength="6" /></label>
+          <button class="btn btn-primary" type="submit">Continue</button>
+          <div style="text-align:center">
+            <button class="btn btn-outline" type="button" data-switch="login">Login</button>
+            <button class="btn btn-outline" type="button" data-switch="signup">Sign up</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Back to top -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/auth.js"></script>
+</body>
+</html>
+

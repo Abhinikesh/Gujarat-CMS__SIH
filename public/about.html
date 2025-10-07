@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About · Temple CMS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <link rel="icon" href="assets/img/favicon.ico">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand"><span class="logo-dot"></span> Temple CMS</a>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="index.html#virtual-tour">360° Virtual Tour</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="contact.html">Contact</a>
+        <a href="#" data-open-login>Login</a>
+      </div>
+      <div class="nav-cta">
+        <a class="btn btn-outline" href="dashboard.html">Check Crowd Status</a>
+        <a class="btn btn-primary" href="dashboard.html">Book Darshan</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Our Mission</h2>
+      <p class="muted">We aim to ensure a dignified, safe, and seamless pilgrimage by combining AI predictions, smart queueing, and proactive safety management across Gujarat’s major temples.</p>
+      <div class="grid cols-3">
+        <div class="card"><div class="icon">AI</div><h3>AI Prediction</h3><p class="muted">Forecast crowd surges using seasonal patterns, holidays, and live signals.</p></div>
+        <div class="card"><div class="icon">IoT</div><h3>IoT Surveillance</h3><p class="muted">Sensors and cameras to monitor density, gates, and routes in real-time.</p></div>
+        <div class="card"><div class="icon">SQ</div><h3>Smart Queue</h3><p class="muted">Timed slots and virtual queues to reduce wait times and crowding.</p></div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item"><strong>Design:</strong> Research best practices and standards</div>
+        <div class="timeline-item"><strong>Build:</strong> Implement modular, scalable systems</div>
+        <div class="timeline-item"><strong>Operate:</strong> Train staff and monitor KPIs</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h4>Temple CMS</h4>
+        <p>Royal blue & gold theme for calm, professional UI.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <p><a href="services.html">Services</a> · <a href="dashboard.html">Dashboard</a></p>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <p><a href="#">Twitter</a> · <a href="#">LinkedIn</a> · <a href="#">YouTube</a></p>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:10px">© <span id="year"></span> Temple CMS · Made by Abhinikesh & Team | 2025</p>
+  </footer>
+
+  <!-- Auth Modal -->
+  <div class="modal" id="auth-modal" aria-hidden="true">
+    <div class="panel">
+      <header>
+        <h3 class="title">Welcome Back</h3>
+        <button class="close" aria-label="Close">✕</button>
+      </header>
+      <form id="auth-form">
+        <div class="row">
+          <label>Email<input type="email" name="email" required /></label>
+          <label>Password<input type="password" name="password" required minlength="6" /></label>
+          <label class="confirm-password" style="display:none">Confirm Password<input type="password" name="confirm" minlength="6" /></label>
+          <button class="btn btn-primary" type="submit">Continue</button>
+          <div style="text-align:center">
+            <button class="btn btn-outline" type="button" data-switch="login">Login</button>
+            <button class="btn btn-outline" type="button" data-switch="signup">Sign up</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/auth.js"></script>
+</body>
+</html>
+

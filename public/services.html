@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services · Temple CMS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <link rel="icon" href="assets/img/favicon.ico">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand"><span class="logo-dot"></span> Temple CMS</a>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="index.html#virtual-tour">360° Virtual Tour</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="contact.html">Contact</a>
+        <a href="#" data-open-login>Login</a>
+      </div>
+      <div class="nav-cta">
+        <a class="btn btn-outline" href="dashboard.html">Check Crowd Status</a>
+        <a class="btn btn-primary" href="dashboard.html">Book Darshan</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <div class="grid cols-3">
+        <div class="card" onclick="openModal('AI Crowd Prediction','Forecast peaks using ML models and historic data.')"><div class="icon">AI</div><h3>AI Crowd Prediction</h3><p class="muted">ML-driven forecasts with daily and hourly granularity.</p></div>
+        <div class="card" onclick="openModal('Smart Queue & Ticketing','Virtual queues and timed slots minimize wait.')"><div class="icon">SQ</div><h3>Smart Queue & Ticketing</h3><p class="muted">Book slots and receive live position updates.</p></div>
+        <div class="card" onclick="openModal('IoT Surveillance','Density and flow tracking with cameras and sensors.')"><div class="icon">IoT</div><h3>IoT Surveillance</h3><p class="muted">Real-time area heatmaps and flow control.</p></div>
+        <div class="card" onclick="openModal('Safety Alerts','Instant alerts for heat, crowding, or emergencies.')"><div class="icon">SA</div><h3>Safety Alerts</h3><p class="muted">Guidance messages across displays and app.</p></div>
+        <div class="card" onclick="openModal('Traffic Management','Live parking, road closures, and shuttle timings.')"><div class="icon">TM</div><h3>Traffic Management</h3><p class="muted">Optimize routes for buses and pilgrims.</p></div>
+        <div class="card" onclick="openModal('Accessibility','Wheelchair routes, assist points, and multilingual help.')"><div class="icon">AC</div><h3>Accessibility Features</h3><p class="muted">Inclusive by design for all devotees.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal" id="service-modal" aria-hidden="true">
+    <div class="panel">
+      <header>
+        <h3 id="service-title">Service</h3>
+        <button class="close" aria-label="Close" onclick="closeModal()">✕</button>
+      </header>
+      <p id="service-desc" class="muted"></p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h4>Temple CMS</h4>
+        <p>Royal blue & gold theme for calm, professional UI.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <p><a href="about.html">About</a> · <a href="dashboard.html">Dashboard</a></p>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <p><a href="#">Twitter</a> · <a href="#">LinkedIn</a> · <a href="#">YouTube</a></p>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:10px">© <span id="year"></span> Temple CMS · Made by Abhinikesh & Team | 2025</p>
+  </footer>
+
+  <script>
+    function openModal(title, desc){
+      document.getElementById('service-title').textContent = title;
+      document.getElementById('service-desc').textContent = desc;
+      document.getElementById('service-modal').classList.add('open');
+    }
+    function closeModal(){ document.getElementById('service-modal').classList.remove('open'); }
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeModal(); });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/auth.js"></script>
+</body>
+</html>
+
