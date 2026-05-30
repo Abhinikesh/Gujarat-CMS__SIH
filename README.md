@@ -42,31 +42,6 @@
 
 ---
 
-## 🏗️ Project Architecture
-temple-cms/
-├── frontend/               # React + Vite user-facing app
-│   ├── src/
-│   │   ├── pages/
-│   │   │   ├── Home.jsx
-│   │   │   ├── Dashboard.jsx
-│   │   │   ├── VirtualTour.jsx
-│   │   │   └── Contact.jsx
-│   │   └── components/
-├── admin/                  # Admin panel (React)
-│   └── src/
-│       ├── pages/
-│       │   ├── dashboard/
-│       │   ├── users/
-│       │   ├── categories/
-│       │   ├── audit/
-│       │   └── settings/
-│       └── store/slices/
-├── backend/                # Node.js / Express API
-├── provider/               # Service provider portal
-└── user/                   # User portal
-
----
-
 ## 🛕 Supported Temples
 
 | Temple | Location | Deity | Significance |
