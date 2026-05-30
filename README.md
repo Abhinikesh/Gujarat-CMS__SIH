@@ -19,24 +19,6 @@
 
 ---
 
-</div>
-
-## 📸 Screenshots
-
-<div align="center">
-
-| Landing Page | 360° Virtual Tour |
-|:---:|:---:|
-| ![Landing](./screenshots/landing.png) | ![Virtual Tour](./screenshots/virtual-tour.png) |
-
-| Live Dashboard | Contact Page |
-|:---:|:---:|
-| ![Dashboard](./screenshots/dashboard.png) | ![Contact](./screenshots/contact.png) |
-
-</div>
-
----
-
 ## ✨ Features
 
 ### 🏛️ Core Modules
